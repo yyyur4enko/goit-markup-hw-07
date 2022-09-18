@@ -7,6 +7,12 @@
   --subcolor: #757575;
 }
 
+.footer-social-list, .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .list {
   list-style: none;
 }
@@ -100,9 +106,6 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -123,11 +126,11 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-accent {
+.logo__accent {
   color: #000000;
 }
 
-.logo-accent-footer {
+.logo__accent-footer {
   color: var(--secondary-color);
 }
 
@@ -357,7 +360,7 @@ body {
   outline: 2px solid black;
 }
 
-.menu-link {
+.menu__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -367,40 +370,45 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: inherit;
 }
-.menu-link:hover, .menu-link:focus {
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
 }
 
-.menu-item {
+.menu__item {
+  align-items: center;
+  color: var(--main-color);
   position: relative;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-item:hover, .menu-item:focus {
+.menu__item:hover, .menu__item:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
 
-.menu-contacts {
+.menu__contacts {
   align-items: center;
   color: var(--subcolor);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-contacts:hover, .menu-contacts:focus {
+.menu__contacts:hover, .menu__contacts:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
-.menu-contacts:not(:last-child) {
+.menu__contacts:not(:last-child) {
   margin-right: 30px;
 }
 
-.current {
+.menu__link_current {
   color: var(--accent-color);
 }
-.current::after {
+.menu__link_current::after {
   position: absolute;
   content: "";
   left: 0;
@@ -435,14 +443,6 @@ body {
   margin-left: auto;
 }
 
-.menu-item {
-  align-items: center;
-  color: var(--main-color);
-}
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .email {
   font-weight: 500;
   font-style: normal;
@@ -461,7 +461,7 @@ body {
   color: var(--accent-color);
 }
 
-.email-icon {
+.email__icon {
   display: inline-block;
   width: 16px;
   height: 12px;
@@ -474,7 +474,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel-icon {
+.tel__icon {
   display: inline-block;
   width: 10px;
   height: 16px;
@@ -488,10 +488,10 @@ body {
 }
 
 .tel {
-  font-weight: 500;
-  font-style: normal;
   font-size: 14px;
-  line-height: 1.14;
+  font-weight: 500;
+  line-height: 1.1428571429;
+  font-style: normal;
   letter-spacing: 0.02em;
   transition-property: color;
   transition-duration: 250ms;
@@ -501,9 +501,6 @@ body {
   align-items: center;
 }
 .tel:hover, .tel:focus {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
@@ -552,7 +549,7 @@ body {
   padding-top: 0px;
 }
 
-.about-section-cont {
+.about-section__cont {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,20 +560,20 @@ body {
   margin-bottom: 30px;
 }
 
-.about-section-icon {
+.about-section__icon {
   fill: solid var(--main-color);
 }
 
-.about-section-link:not(:last-child) {
+.about-section__link:not(:last-child) {
   margin-right: 30px;
 }
 
-.about-pcs-wrapper {
+.about-pcs__wrapper {
   display: block;
   position: relative;
 }
 
-.about-pcs-overlay {
+.about-pcs__overlay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,7 +604,7 @@ body {
   max-width: 270px;
 }
 
-.list-title-description {
+.list-title__description {
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
@@ -755,9 +752,6 @@ body {
 }
 
 .footer-social-list {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   gap: 10px;
 }
 
@@ -869,10 +863,10 @@ body {
 }
 
 .subscribe-text {
-  font-family: var(--primary-font);
-  font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  font-family: var(--primary-font);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-color);

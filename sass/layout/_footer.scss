@@ -6,9 +6,7 @@
 }
 
 .footer-social-list {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @extend %align;
     gap: 10px;
 }
 
